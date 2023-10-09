@@ -1,3 +1,5 @@
+// showsSlice.js
+
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -60,9 +62,11 @@ export const fetchShows = createAsyncThunk('shows/fetchShows', async (_, { dispa
 
 export const fetchGenres = createAsyncThunk('shows/fetchGenres', async (_, { dispatch }) => {
   try {
-    const response = await fetch('https://api.tvmaze.com/genres');
+    const response = await fetch('https://api.tvmaze.com/shows');
     const data = await response.json();
-    dispatch(setGenres(data));
+    const genres = data.map((show) => show.genres).flat();
+    const uniqueGenres = [...new Set(genres)];
+    dispatch(setGenres(uniqueGenres));
   } catch (error) {
     dispatch(setError('An error occurred while fetching the genres data.'));
   }

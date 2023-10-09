@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-regular-svg-icons';
-import { fetchShows, setSelectedGenre } from '../redux/showsSlice';
+import { fetchShows, setSelectedGenre, fetchGenres } from '../redux/showsSlice';
 import '../styles/main.css';
 
 function Main() {
@@ -13,6 +13,7 @@ function Main() {
 
   useEffect(() => {
     dispatch(fetchShows());
+    dispatch(fetchGenres());
   }, [dispatch]);
 
   const selectedGenre = useSelector((state) => state.shows.selectedGenre);
