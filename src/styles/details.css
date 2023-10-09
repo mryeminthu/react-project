@@ -1,0 +1,57 @@
+.details-container {
+  padding: 20px;
+}
+
+.details-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-link {
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.details-content {
+  display: flex;
+}
+
+.left-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.right-column {
+  flex: 2;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.summary {
+  font-size: 16px;
+}
+
+.details-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.genres,
+.rating {
+  flex: 1;
+  font-size: 16px;
+}
