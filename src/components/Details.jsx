@@ -22,18 +22,14 @@ function Details() {
     return <div>Loading...</div>;
   }
 
-  // Function to remove HTML tags from a string
   function stripHtmlTags(html) {
     const temp = document.createElement('div');
     temp.innerHTML = html;
     return temp.textContent || temp.innerText || '';
   }
 
-  // Split the show.summary into paragraphs and remove <b> tags
   const summaryParagraphs = show.summary.split('<p>').map((paragraph, index) => {
-    // Generate a unique key based on the paragraph content
     const key = `${index}-${paragraph}`;
-    // Remove closing </p> tags
     const cleanedParagraph = stripHtmlTags(paragraph).replace('</p>', '');
 
     return <p key={key}>{cleanedParagraph}</p>;
@@ -64,7 +60,6 @@ function Details() {
             {' '}
             {show.language}
           </p>
-          {/* Display show.summary paragraphs */}
           <div className="summary">{summaryParagraphs}</div>
           <p className="genres">
             Genres:
