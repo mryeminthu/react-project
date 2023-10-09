@@ -64,7 +64,7 @@ const Main = () => {
           value={selectedGenre}
           onChange={handleGenreChange}
         >
-          <option value="">All Genres</option>
+          <option value="">All</option>
           {genres.map((genre) => (
             <option key={genre} value={genre}>
               {genre}
