@@ -22,6 +22,23 @@ function Details() {
     return <div>Loading...</div>;
   }
 
+  // Function to remove HTML tags from a string
+  function stripHtmlTags(html) {
+    const temp = document.createElement('div');
+    temp.innerHTML = html;
+    return temp.textContent || temp.innerText || '';
+  }
+
+  // Split the show.summary into paragraphs and remove <b> tags
+  const summaryParagraphs = show.summary.split('<p>').map((paragraph, index) => {
+    // Generate a unique key based on the paragraph content
+    const key = `${index}-${paragraph}`;
+    // Remove closing </p> tags
+    const cleanedParagraph = stripHtmlTags(paragraph).replace('</p>', '');
+
+    return <p key={key}>{cleanedParagraph}</p>;
+  });
+
   return (
     <div className="details-container">
       <div className="details-header">
@@ -33,27 +50,22 @@ function Details() {
       </div>
       <div className="details-content">
         <div className="left-column">
+          <h2>{show.name}</h2>
           <img src={show.image?.medium} alt={show.name} />
         </div>
         <div className="right-column">
-          <div className="name-rating-container">
-            <h2>{show.name}</h2>
-            <p className="rating">
-              Rating:
-              {' '}
-              {show.rating?.average}
-            </p>
-          </div>
+          <p className="rating">
+            Rating:
+            {' '}
+            {show.rating?.average}
+          </p>
           <p>
             Language:
             {' '}
             {show.language}
           </p>
-          <p className="summary">
-            Summary:
-            <br />
-            {show.summary}
-          </p>
+          {/* Display show.summary paragraphs */}
+          <div className="summary">{summaryParagraphs}</div>
           <p className="genres">
             Genres:
             {' '}
