@@ -1,17 +1,17 @@
 import React from 'react';
-import { FaUserFriends, FaRegSun } from 'react-icons/fa';
-import { GrMicrophone } from 'react-icons/gr';
+import { FaVideo, FaRegSun, FaMicrophone } from 'react-icons/fa';
 import '../styles/navbar.css';
 
 function NavBar() {
+  const appName = "YMT's MovieMingle";
   return (
     <nav className="navbar">
       <div className="logo">
-        <FaUserFriends />
-        <h1>People</h1>
+        <FaVideo />
+        <h1>{appName}</h1>
       </div>
       <div className="icons">
-        <GrMicrophone />
+        <FaMicrophone />
         <FaRegSun />
       </div>
     </nav>
