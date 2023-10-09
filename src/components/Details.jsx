@@ -1,22 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import '../styles/details.css';
-
+import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { fetchShow } from '../redux/showsSlice';
+import '../styles/details.css';
 
 function Details() {
   const { id } = useParams();
-  const [show, setShow] = useState(null);
+  const dispatch = useDispatch();
+  const show = useSelector((state) => state.shows.selectedShow);
 
   useEffect(() => {
-    fetch(`https://api.tvmaze.com/shows/${id}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setShow(data);
-      });
-  }, [id]);
+    dispatch(fetchShow(id));
+  }, [dispatch, id]);
 
   if (!show) {
     return <div>Loading...</div>;
@@ -78,25 +75,5 @@ function Details() {
     </div>
   );
 }
-
-Details.propTypes = {
-  location: PropTypes.shape({
-    state: PropTypes.shape({
-      show: PropTypes.shape({
-        image: PropTypes.shape({
-          medium: PropTypes.string,
-        }),
-        name: PropTypes.string,
-        language: PropTypes.string,
-        summary: PropTypes.string,
-        genres: PropTypes.arrayOf(PropTypes.string),
-        rating: PropTypes.shape({
-          average: PropTypes.number,
-        }),
-        officialSite: PropTypes.string,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
-};
 
 export default Details;

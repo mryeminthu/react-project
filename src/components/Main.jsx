@@ -1,34 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-regular-svg-icons';
+import { fetchShows, setSelectedGenre } from '../redux/showsSlice';
 import '../styles/main.css';
 
-const Main = () => {
-  const [shows, setShows] = useState([]);
-  const [selectedGenre, setSelectedGenre] = useState('');
-  const [genres, setGenres] = useState([]);
-
+function Main() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const shows = useSelector((state) => state.shows.shows);
 
   useEffect(() => {
-    fetch('https://api.tvmaze.com/shows')
-      .then((response) => response.json())
-      .then((data) => {
-        setShows(data);
-      });
-  }, []);
+    dispatch(fetchShows());
+  }, [dispatch]);
 
-  useEffect(() => {
-    const allGenres = shows
-      .map((show) => show.genres)
-      .reduce((acc, genres) => [...acc, ...genres], []);
-    const uniqueGenres = Array.from(new Set(allGenres));
-    setGenres(uniqueGenres);
-  }, [shows]);
+  const selectedGenre = useSelector((state) => state.shows.selectedGenre);
+  const genres = useSelector((state) => state.shows.genres);
 
   const handleGenreChange = (event) => {
-    setSelectedGenre(event.target.value);
+    dispatch(setSelectedGenre(event.target.value));
   };
 
   const filteredShows = selectedGenre
@@ -74,6 +65,6 @@ const Main = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Main;
