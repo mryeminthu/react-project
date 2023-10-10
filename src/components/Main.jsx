@@ -28,43 +28,47 @@ function Main() {
     : shows;
 
   return (
-    <div className="main-container">
-      <div className="left">
-        <h2>Shows List</h2>
-        <div className="people-list">
-          {filteredShows.map((show) => (
-            <div className="person-card" key={show.id}>
-              <FontAwesomeIcon
-                icon={faCircle}
-                className="icon"
-                onClick={() => {
-                  navigate(`/details/${show.id}`);
-                }}
-              />
-              <img src={show.image?.medium} alt={show.name} />
-              <div className="person-info">
-                <h3>{show.name}</h3>
-                <p>{show.genres.join(', ')}</p>
-              </div>
-            </div>
-          ))}
+    <>
+      <div className="title-container">
+        <div className="left">
+          <h2 className="show-list">Shows List</h2>
+        </div>
+
+        <div className="right">
+          <h2>Categories</h2>
+          <select
+            value={selectedGenre}
+            onChange={handleGenreChange}
+          >
+            <option value="">All</option>
+            {genres.map((genre) => (
+              <option key={genre} value={genre}>
+                {genre}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
-      <div className="right">
-        <h2>Categories</h2>
-        <select
-          value={selectedGenre}
-          onChange={handleGenreChange}
-        >
-          <option value="">All</option>
-          {genres.map((genre) => (
-            <option key={genre} value={genre}>
-              {genre}
-            </option>
-          ))}
-        </select>
+
+      <div className="people-list">
+        {filteredShows.map((show) => (
+          <div className="person-card" key={show.id}>
+            <FontAwesomeIcon
+              icon={faCircle}
+              className="icon"
+              onClick={() => {
+                navigate(`/details/${show.id}`);
+              }}
+            />
+            <img src={show.image?.medium} alt={show.name} />
+            <div className="person-info">
+              <h3>{show.name}</h3>
+              <p>{show.genres.join(', ')}</p>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
+    </>
   );
 }
 

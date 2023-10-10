@@ -2,21 +2,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
+  padding: 1.5rem;
+  background-color: #58163ac9;
   color: white;
 }
 
-.logo {
+.logo-container {
   display: flex;
   align-items: center;
 }
 
-.logo h1 {
-  margin-left: 10px;
+.logo {
+  font-size: 4.5rem;
+  padding-right: 0.8rem;
+  color: aquamarine;
+}
+
+.appName {
+  font-size: 2rem;
+  color: #f5e9e8;
 }
 
 .icons {
   display: flex;
   align-items: center;
+  font-size: 2.3rem;
+  margin-right: 2.5rem;
+  color: rgb(243, 204, 216);
+}
+
+.icons-left {
+  padding-right: 1.5rem;
 }
