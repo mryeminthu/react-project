@@ -1,53 +1,103 @@
-.main-container {
+.title-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
+  align-items: center;
+  padding: 0 2rem;
+  color: #ffffff;
 }
 
-.left {
+.left-title {
   flex: 1;
-  padding-right: 20px;
 }
 
-.right {
+.show-list {
+  font-size: 1.4rem;
+  font-weight: 800;
+  font-family: Lato, sans-serif;
+}
+
+.right-title {
   flex: 1;
-  padding-left: 20px;
+  text-align: right;
+}
+
+.categories {
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 select {
-  width: 100%;
+  width: 23%;
   padding: 10px;
   margin-bottom: 20px;
+  font-size: 1rem;
+  border: 3px solid black;
+  border-radius: 5px;
+  outline: none;
+  font-weight: bold;
 }
 
-.people-list {
+.card-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  margin: 0 2rem;
 }
 
-.person-card {
-  background-color: #f0f0f0;
-  padding: 10px;
+.movie-card {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #ffffff;
+  box-shadow: 2px 2px black;
+  padding-bottom: 0.5rem;
+  max-height: 75vh;
 }
 
-.person-card img {
-  max-width: 100%;
-  height: auto;
+.movie-card:nth-child(odd) {
+  background-color: rgba(59,130,245,.5);
 }
 
-.person-info {
-  text-align: center;
-  margin-top: 10px;
+.movie-card:nth-child(even) {
+  background-color: rgba(59,130,246,.5);
 }
 
-.icon {
+.right-arrow {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
+  color: white;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.movie-card img {
+  height: 85%;
+  width: 70%;
+  padding-top: 2.2rem;
+}
+
+.movie-info {
+  text-align: center;
+}
+
+.movie-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.4rem 0;
+}
+
+.movie-type {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  select {
+    width: 60%;
+  }
 }

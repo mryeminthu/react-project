@@ -2,21 +2,41 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
+  padding: 1.4rem 1.8rem;
+  background-color: #4369b2;
   color: white;
+  margin-bottom: 0.7rem;
 }
 
-.logo {
+.logo-container {
   display: flex;
   align-items: center;
 }
 
-.logo h1 {
-  margin-left: 10px;
+.logo {
+  font-size: 3.9rem;
+  padding-right: 0.8rem;
+  color: aquamarine;
+}
+
+.appName {
+  font-size: 1.9rem;
+  color: #f5e9e8;
+  font-weight: 800;
 }
 
 .icons {
   display: flex;
   align-items: center;
+  margin-right: 1.1rem;
+  color: rgb(243, 204, 216);
+}
+
+.icons-left {
+  font-size: 1.9rem;
+}
+
+.icons-right {
+  padding-left: 1.6rem;
+  font-size: 3.2rem;
 }

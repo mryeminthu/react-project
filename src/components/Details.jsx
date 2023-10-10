@@ -34,10 +34,9 @@ function Details() {
 
   return (
     <div className="details-container">
-      <div className="details-header">
-        <Link to="/" className="back-link">
+      <div type="button" className="back-container">
+        <Link to="/" className="left-arrow">
           <FontAwesomeIcon icon={faArrowLeft} className="back-icon" />
-          {' '}
           Back
         </Link>
       </div>
@@ -52,12 +51,12 @@ function Details() {
             {' '}
             {show.rating?.average}
           </p>
-          <p>
+          <p className="language">
             Language:
             {' '}
             {show.language}
           </p>
-          <div className="summary">{summaryParagraphs}</div>
+          <p className="summary">{summaryParagraphs}</p>
           <p className="genres">
             Genres:
             {' '}
