@@ -30,7 +30,7 @@ function Main() {
     <>
       <div className="title-container">
         <div className="left-title">
-          <h2 className="show-title">Shows List</h2>
+          <h2 className="show-list">Shows List</h2>
         </div>
 
         <div className="right-title">
@@ -59,9 +59,9 @@ function Main() {
               }}
             />
             <img src={show.image?.medium} alt={show.name} />
-            <div className="movie-type">
-              <h3>{show.name}</h3>
-              <p>{show.genres.join(', ')}</p>
+            <div className="movie-info">
+              <h3 className="movie-title">{show.name}</h3>
+              <p className="movie-type">{show.genres.join(', ')}</p>
             </div>
           </div>
         ))}
