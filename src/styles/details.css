@@ -2,13 +2,13 @@
   padding: 20px;
 }
 
-.details-header {
+.back-container {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.back-link {
+.left-arrow {
   font-size: 24px;
   margin-right: 10px;
   cursor: pointer;

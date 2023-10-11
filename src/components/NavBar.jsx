@@ -12,7 +12,7 @@ function NavBar() {
       </div>
       <div className="icons">
         <FaMicrophone className="icons-left" />
-        <FaRegSun />
+        <FaRegSun className="icons-right" />
       </div>
     </nav>
   );

@@ -34,10 +34,9 @@ function Details() {
 
   return (
     <div className="details-container">
-      <div className="details-header">
-        <Link to="/" className="back-link">
+      <div className="back-container">
+        <Link to="/" className="left-arrow">
           <FontAwesomeIcon icon={faArrowLeft} className="back-icon" />
-          {' '}
           Back
         </Link>
       </div>

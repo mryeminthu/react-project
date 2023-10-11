@@ -2,9 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
-  background-color: #58163ac9;
+  padding: 1.4rem 1.8rem;
+  background-color: #4369b2;
   color: white;
+  margin-bottom: 0.7rem;
 }
 
 .logo-container {
@@ -13,24 +14,29 @@
 }
 
 .logo {
-  font-size: 4.5rem;
+  font-size: 3.9rem;
   padding-right: 0.8rem;
   color: aquamarine;
 }
 
 .appName {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #f5e9e8;
+  font-weight: 800;
 }
 
 .icons {
   display: flex;
   align-items: center;
-  font-size: 2.3rem;
-  margin-right: 2.5rem;
+  margin-right: 1.1rem;
   color: rgb(243, 204, 216);
 }
 
 .icons-left {
-  padding-right: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.icons-right {
+  padding-left: 1.5rem;
+  font-size: 3.2rem;
 }

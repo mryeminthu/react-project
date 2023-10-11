@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle } from '@fortawesome/free-regular-svg-icons';
+import { BsArrowRightCircle } from 'react-icons/bs';
 import { fetchShows, setSelectedGenre, fetchGenres } from '../redux/showsSlice';
 import '../styles/main.css';
 
@@ -30,12 +29,12 @@ function Main() {
   return (
     <>
       <div className="title-container">
-        <div className="left">
+        <div className="left-title">
           <h2 className="show-list">Shows List</h2>
         </div>
 
-        <div className="right">
-          <h2>Categories</h2>
+        <div className="right-title">
+          <h2 className="categories">Categories</h2>
           <select
             value={selectedGenre}
             onChange={handleGenreChange}
@@ -50,20 +49,19 @@ function Main() {
         </div>
       </div>
 
-      <div className="people-list">
+      <div className="card-list">
         {filteredShows.map((show) => (
-          <div className="person-card" key={show.id}>
-            <FontAwesomeIcon
-              icon={faCircle}
-              className="icon"
+          <div className="movie-card" key={show.id}>
+            <BsArrowRightCircle
+              className="right-arrow"
               onClick={() => {
                 navigate(`/details/${show.id}`);
               }}
             />
             <img src={show.image?.medium} alt={show.name} />
-            <div className="person-info">
-              <h3>{show.name}</h3>
-              <p>{show.genres.join(', ')}</p>
+            <div className="movie-info">
+              <h3 className="movie-title">{show.name}</h3>
+              <p className="movie-type">{show.genres.join(', ')}</p>
             </div>
           </div>
         ))}
