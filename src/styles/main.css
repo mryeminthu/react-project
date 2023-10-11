@@ -55,7 +55,7 @@ select {
 }
 
 .movie-card:nth-child(odd) {
-  background-color: rgba(59, 130, 245, 0.5);
+  background-color: rgba(12, 91, 219, 0.5);
 }
 
 .movie-card:nth-child(even) {
@@ -93,11 +93,27 @@ select {
 }
 
 @media screen and (max-width: 768px) {
+  .title-container {
+    padding: 0 1.3rem;
+  }
+
+  .show-list {
+    font-size: 1.1rem;
+  }
+
+  .categories {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+
   .card-list {
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 1rem;
   }
 
   select {
-    width: 60%;
+    width: 65%;
+    padding: 6px;
+    font-size: 0.7rem;
   }
 }

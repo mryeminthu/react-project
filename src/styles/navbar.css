@@ -40,3 +40,32 @@
   padding-left: 1.6rem;
   font-size: 3.2rem;
 }
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0.9rem 1.2rem;
+  }
+
+  .logo {
+    font-size: 3.4rem;
+    padding-right: 0.8rem;
+    color: aquamarine;
+  }
+
+  .appName {
+    font-size: 1.3rem;
+  }
+
+  .icons {
+    margin-right: 0.6rem;
+  }
+
+  .icons-left {
+    font-size: 1.4rem;
+  }
+
+  .icons-right {
+    padding-left: 1rem;
+    font-size: 2.7rem;
+  }
+}
