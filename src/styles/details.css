@@ -12,13 +12,13 @@
   justify-content: space-between;
   max-width: 9%;
   font-size: 1.7rem;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   padding: 0.7rem 1.5rem;
   border-radius: 1.3rem;
   box-shadow: 1px 4px 4px rgba(59, 130, 245, 0.16);
-  background-color: rgba(59,130,245,.5);
+  background-color: rgba(59, 130, 245, 0.5);
   cursor: pointer;
 }
 
@@ -76,5 +76,5 @@ img {
 }
 
 .official-site a {
-  color: inherit; 
+  color: inherit;
 }
