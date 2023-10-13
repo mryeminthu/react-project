@@ -35,10 +35,7 @@ function Main() {
 
         <div className="right-title">
           <h2 className="categories">Categories</h2>
-          <select
-            value={selectedGenre}
-            onChange={handleGenreChange}
-          >
+          <select value={selectedGenre} onChange={handleGenreChange}>
             <option value="">All</option>
             {genres.map((genre) => (
               <option key={genre} value={genre}>
