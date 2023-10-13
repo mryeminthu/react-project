@@ -56,6 +56,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://ymt-movie.onrender.com/)
+- - [Video Walkthrough]https://www.loom.com/share/934714c37c384907b03f15eb4d91d34b?sid=58596ed4-d373-4767-8e57-a50001586eac)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
