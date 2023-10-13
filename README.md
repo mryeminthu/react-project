@@ -55,7 +55,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://ymt-movie.onrender.com/)
+- [Live Demo Link](https://ymt-movie.onrender.com/np)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -132,8 +132,8 @@ You can deploy this project using: GitHub Pages.
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/mryeminthu/react-project/issues).
+- Feel free to contribute, report issues, or make feature requests – your input is appreciated!
+  Feel free to check the [issues page](https://github.com/mryeminthu/react-project/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -149,7 +149,8 @@ If you appreciate this project, please consider awarding it a ⭐️.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I want to express my gratitude to Microverse for providing the materials.
+> - We would like to express our sincere thanks to Microverse for providing us with the resources and knowledge necessary to carry out this project.
+> - Acknowledgment: Special thanks to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) the author of the [original design](<https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)>)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
