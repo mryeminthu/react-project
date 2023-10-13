@@ -55,7 +55,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://ymt-movie.onrender.com/np)
+- [Live Demo Link](https://ymt-movie.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
