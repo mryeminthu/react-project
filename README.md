@@ -149,7 +149,7 @@ If you appreciate this project, please consider awarding it a ⭐️.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> - We would like to express our sincere thanks to Microverse for providing us with the resources and knowledge necessary to carry out this project.
+> - I would like to express our sincere thanks to Microverse for providing us with the resources and knowledge necessary to carry out this project.
 > - Acknowledgment: Special thanks to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) the author of the [original design](<https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)>)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
