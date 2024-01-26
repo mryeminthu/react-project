@@ -55,7 +55,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://ymt-movie.onrender.com/)
+- [Live Demo Link](https://cozy-kitsune-0c212e.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
