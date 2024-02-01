@@ -1,6 +1,7 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   align-items: center;
   padding: 1.4rem 1.8rem;
   background-color: #4369b2;
@@ -53,11 +54,11 @@
   }
 
   .appName {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 
   .icons {
-    margin-right: 0.6rem;
+    margin-right: 0.5rem;
   }
 
   .icons-left {
